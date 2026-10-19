@@ -7,7 +7,7 @@
 - [x] Creating this Roadmap
 - [x] Creating the github repo, and having a `.gitignore` and an `MIT LICENSE`
 - [x] Creating a basic folder structure and Makefile 
-- [ ] Setting up `.clangtidy` and `.clangformat`
+- [x] Setting up `.clangtidy` and `.clangformat`
 - [x] Setting up the Google Test Framework `#done through the makefile`
 - [x] Creating a very (veryyyy) simple logger 
 - [x] Making you understand how playing with macros makes the logger appear/disappear
