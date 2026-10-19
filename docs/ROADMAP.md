@@ -6,11 +6,11 @@
 - [x] Establishing the goals and non-goals
 - [x] Creating this Roadmap
 - [x] Creating the github repo, and having a `.gitignore` and an `MIT LICENSE`
-- [ ] Creating a basic folder structure and Makefile
+- [x] Creating a basic folder structure and Makefile 
 - [ ] Setting up `.clangtidy` and `.clangformat`
-- [ ] Setting up the Google Test Framework
-- [ ] Creating a very (veryyyy) simple logger
-- [ ] Making you understand how playing with macros makes the logger appear/disappear
+- [x] Setting up the Google Test Framework `#done through the makefile`
+- [x] Creating a very (veryyyy) simple logger 
+- [x] Making you understand how playing with macros makes the logger appear/disappear
 - [ ] Dev Blog in the `docs` section
 
 

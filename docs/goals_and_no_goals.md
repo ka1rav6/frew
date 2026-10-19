@@ -1,5 +1,9 @@
 # Frew 
 
+If you have clicked on this video, you know what this is about. If you have ever wondered about the internals of anything in machine learning,
+or the workings of libraries like numpy, pandas and scikitlearn, then you are in the right place. Because we are going to build just that.
+And you will walk away with something more than just a better understanding of ML. You will walk away as a better programmer and software developer.
+
 I plan to make a really good combined interface for machine learning in C++. But, note that this 
 is not for production purposes, and more for learning and understanding purposes
 
@@ -49,3 +53,5 @@ but I will make sure I make you understand each thing all the way.
 This project is for mine and your educational purposes only
 
 Feel free to ask any doubts in the **Discussion** section of the repo
+
+
