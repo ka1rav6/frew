@@ -7,6 +7,21 @@
 #include <ostream>
 #include <utility>
 #include <vector>
+// I know that I am using macros a lot... but i just love them! and they do not impact runtimes so
+// yes i will!
+
+#define PRINT_VEC(os, x)                                                                           \
+    do                                                                                             \
+    {                                                                                              \
+        (os) << "[";                                                                               \
+        for (size_t i = 0; i < (x).size(); ++i)                                                    \
+        {                                                                                          \
+            if (i > 0)                                                                             \
+                (os) << ", ";                                                                      \
+            (os) << (x)[i];                                                                        \
+        }                                                                                          \
+        (os) << "]";                                                                               \
+    } while (0)
 
 namespace frew
 {
@@ -24,7 +39,7 @@ struct Metadata
 {
     std::vector<size_t> shape;
     std::vector<size_t> strides; // we will understand why strides are a vector in due time
-    size_t offset;
+    size_t offset{};
     Metadata() = default;
     ~Metadata() = default;
     // deleting the copy constructor for now. Might need it when we are copying the metadata while
@@ -32,32 +47,8 @@ struct Metadata
     Metadata(const Metadata&) = delete;
 };
 
-// I know that I am using macros a lot... but i just love them! and they do not impact runtimes so
-// yes i will!
-
-#define PRINT_VEC(os, x)                                                                           \
-    do                                                                                             \
-    {                                                                                              \
-        (os) << "[";                                                                               \
-        for (size_t i = 0; i < (x).size(); ++i)                                                    \
-        {                                                                                          \
-            if (i > 0)                                                                             \
-                (os) << ", ";                                                                      \
-            (os) << (x)[i];                                                                        \
-        }                                                                                          \
-        (os) << "]";                                                                               \
-    } while (0)
-
 // standard printing of the metadata
-std::ostream& operator<<(std::ostream& os, const Metadata& md)
-{
-    os << "[ Shape  ] : ";
-    PRINT_VEC(os, md.shape);
-    os << "\n" << "[ Size   ] : ";
-    PRINT_VEC(os, md.strides);
-    os << "\n" << "[ Offset ] : " << md.offset << "\n";
-    return os;
-}
+std::ostream& operator<<(std::ostream& os, const Metadata& md);
 
 template <Tensor_dtype T> class Tensor
 {
@@ -65,7 +56,10 @@ public:
     // constructors, important publically avaliable functions
 
     // a simple getter for the metadata of the tensor
-    [[nodiscard]] const Metadata& metadata() const;
+    [[nodiscard]] const Metadata& metadata() const
+    {
+        return this->_metadata;
+    }
 
 private:
     // metadata

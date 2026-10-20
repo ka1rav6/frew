@@ -43,9 +43,9 @@
 **Followed by rigorous testing in after each step**
 
 ## Phase 1.1.0 - 2.0.0 : The Machine Learning part
-- [ ] Linear BDG Regression
-- [ ] Linear SDG Regression
-- [ ] Logistic Regression (BDG and SDG)
+- [ ] Linear BGD Regression
+- [ ] Linear SGD Regression
+- [ ] Logistic Regression (BGD and SGD)
 - [ ] Multivariate Linear and Logistic Regression
 - [ ] Metric calculation (`Accuracy`, `Precision`, `Recall`, `F1 Score`, `ROC AUC`)
 - [ ] KNN Classification Algorithm
